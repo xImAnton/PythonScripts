@@ -1,5 +1,6 @@
 import subprocess
 import threading
+from typing import Callable
 
 
 class ProcessCommunication:
@@ -13,12 +14,12 @@ class ProcessCommunication:
         :param on_output: called with the line as only argument on console output
         :param on_close: called when the subprocess ended
         """
-        self.command = command
-        self.cwd = cwd
-        self.process = None
-        self.on_output = on_output
-        self.on_close = on_close
-        self.running = False
+        self.command: str = command
+        self.cwd: str = cwd
+        self.process: subprocess.Popen = None
+        self.on_output: Callable = on_output
+        self.on_close: Callable = on_close
+        self.running: bool = False
 
     def begin(self) -> None:
         """
