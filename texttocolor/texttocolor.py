@@ -30,6 +30,7 @@ if __name__ == '__main__':
     pygame.init()
     display_size = (800, 600)
     screen = pygame.display.set_mode(display_size, pygame.RESIZABLE)
+    pygame.display.set_caption("Text to Color - " + s)
     font = pygame.font.SysFont(None, 80)
 
     running = True
