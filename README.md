@@ -1,5 +1,5 @@
 # PythonScripts
-My python scripts that are not worth a new repo
+My (useless) python scripts that are not worth a new repo
 
 ## Scripts
 * [LineVisualizer](/linevisualizer)
